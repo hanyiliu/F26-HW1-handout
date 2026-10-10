@@ -5,13 +5,24 @@
 
 class Configuration {
 public:
+    static Configuration& getInstance() {
+        static Configuration instance;
+        return instance;
+    }
+
+    Configuration(const Configuration&) = delete;
+    Configuration& operator=(const Configuration&) = delete;
 
 private:
 
-    std::string appName;
-    std::string logLevel;
-    int maxConnections;
-    bool debugMode;
+    Configuration() {
+        return;
+    }
+
+    std::string appName = "ECS160-HW1";
+    std::string logLevel = "INFO";
+    int maxConnections = 32;
+    bool debugMode = true;
 };
 
 #endif
