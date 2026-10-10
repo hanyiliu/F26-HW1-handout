@@ -7,7 +7,9 @@ public class Configuration {
     private int maxConnections = 32;
     private boolean debugMode = true;
 
-    private static Configuration instance;
+    private static Configuration instance = new Configuration();
+
+    private Configuration() {}
 
     public static Configuration getInstance() {
         return instance;
