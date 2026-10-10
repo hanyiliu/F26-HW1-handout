@@ -10,4 +10,9 @@ public class Num implements Expr {
     public int getValue() {
         return value;
     }
+
+    @Override
+    public <R> R use(ExprVisitor<R> visitor) {
+        return visitor.visitNum(this);
+    }
 }

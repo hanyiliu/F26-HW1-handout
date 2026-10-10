@@ -4,4 +4,9 @@ public class Mult extends BinaryExpr {
     public Mult(Expr left, Expr right) {
         super(left, right);
     }
+
+    @Override
+    public <R> R use(ExprVisitor<R> visitor) {
+        return visitor.visitMult(this);
+    }
 }

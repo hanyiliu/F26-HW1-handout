@@ -4,4 +4,9 @@ public class Add extends BinaryExpr {
     public Add(Expr left, Expr right) {
         super(left, right);
     }
+
+    @Override
+    public <R> R use(ExprVisitor<R> visitor) {
+        return visitor.visitAdd(this);
+    }
 }
