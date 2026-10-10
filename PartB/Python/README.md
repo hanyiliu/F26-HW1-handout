@@ -1,0 +1,1 @@
+While using a decorator as a tag does keep syntax simple, it removes the choice of using it or not. By applying it directly to the AdminUser class, every instance of AdminUser has the logging applied.
